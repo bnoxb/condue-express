@@ -13,6 +13,7 @@ app.use(session({
 
 // bodyparser middleware
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 // set the cors options
 const corsOptions = {

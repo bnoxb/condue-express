@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
-
-
-mongoose.connect('mongodb://localhost/moviesOne', {
+mongoose.connect('mongodb://localhost/condue', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false

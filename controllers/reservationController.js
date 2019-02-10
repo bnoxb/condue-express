@@ -29,4 +29,17 @@ router.post('/', async (req,res)=>{
     }
 })
 
+// put res route - UPDATE
+router.put('/:id', async (req, res)=> {
+    // console.log(req.body);
+    try{
+        const updatedRes = await Reservation.findByIdAndUpdate(req.params.id, req.body, {new:true});
+        res.json({
+            status: 200,
+            data: updatedRes
+        });
+    }catch(err){
+        console.log(err);
+    }
+})
 module.exports = router;

@@ -14,7 +14,7 @@ router.get('/', async (req, res)=>{
     }catch(err){
         console.log(err);
     }
-})
+});
 
 // post res route - CREATE
 router.post('/', async (req,res)=>{
@@ -27,7 +27,7 @@ router.post('/', async (req,res)=>{
     }catch(err){
         console.log(err);
     }
-})
+});
 
 // put res route - UPDATE
 router.put('/:id', async (req, res)=> {
@@ -41,5 +41,19 @@ router.put('/:id', async (req, res)=> {
     }catch(err){
         console.log(err);
     }
-})
+});
+
+// delete res route - DELETE
+router.delete('/:id', async (req,res)=>{
+    try{
+        const deletedRes = await Reservation.findByIdAndDelete(req.params.id);
+        res.json({
+            status: 200,
+            data: deletedRes
+        })
+    }catch(err){
+        console.log(err)
+    }
+});
+
 module.exports = router;

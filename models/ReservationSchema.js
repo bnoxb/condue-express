@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const reservationSchema = new mongoose.Schema({
-    name: String,
-    date: Date,
-    time: String,
-    numGuests: Number,
+    name: {type: String, required: true},
+    date: {type: Date, required: true},
+    time: {type: String, required: true},
+    numGuests: {type: Number, required: true},
     note: String
 })
 

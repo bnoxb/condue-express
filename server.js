@@ -16,7 +16,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-// set the cors options
+// set the cors options for the stuff
 const corsOptions = {
     origin: process.env.CORS_URI,
     credentials: true, // so the session cookie can be sent

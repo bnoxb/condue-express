@@ -22,7 +22,7 @@ const corsOptions = {
     credentials: true, // so the session cookie can be sent
     optionsSuccessStatus: 200
 }
-// tell the app to use it
+// tell the app to use it and stuff
 app.use(cors(corsOptions));
 
 // controllers set after middleware

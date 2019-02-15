@@ -1,3 +1,4 @@
+require('dotenv').config();
 require('./db/db');
 const express       = require('express');
 const app           = express();
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 
 // set the cors options
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: process.env.CORS_URI,
     credentials: true, // so the session cookie can be sent
     optionsSuccessStatus: 200
 }
